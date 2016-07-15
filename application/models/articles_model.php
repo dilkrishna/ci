@@ -7,9 +7,9 @@ class Articles_model extends CI_Model{
         $user_id = $this->session->userdata('user_id');
         $query =  $this->db
                 ->select('title')
-                ->from('articles')
+//                ->from('articles')
                 ->where('user_id',$user_id)
-                ->get();
+                ->get('articles');
         
         return $query-> result();
     }
