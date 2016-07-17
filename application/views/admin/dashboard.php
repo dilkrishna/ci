@@ -11,10 +11,10 @@
             <?php foreach($articles as $article):  ?>
             <tr>  
             <td>1</td>
-            <td> <?php $articles->title ?> </td> 
+            <td> <?php echo $article->title ?> </td> 
             <td>
                 <a href="#" class="btn btn-primary">Edit</a>
-                <a href="#" class="btn btn-primary">Delete</a>
+                <a href="#" class="btn btn-danger">Delete</a>
 
             </td>
             </tr>

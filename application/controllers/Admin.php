@@ -8,6 +8,6 @@ class Admin extends MY_Controller{
        $articles = $this->articles_model->articles_list();
         
         
-        $this->load->view('admin/dashboard',['articles', $articles]);
+        $this->load->view('admin/dashboard',['articles'=> $articles]);
     }
 }
