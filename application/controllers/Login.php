@@ -26,13 +26,13 @@ class Login extends MY_Controller{
                 redirect('admin');
             }
             else{
-                echo "Your username or password is incorrect";
-                $this->load->view('public/admin_login');
+                $this->session->set_flashdata('login_failed','invalid username or password');
+                redirect('login');
             }
         }
         else{
-//            redirect('login');
-        $this->load->view('public/admin_login');
+            redirect('login');
+//        $this->load->view('public/admin_login');
         }
 
     }
