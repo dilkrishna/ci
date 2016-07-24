@@ -19,8 +19,8 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-                <li><?php echo $this->session->userdata('user')['username']?></li>
-          <li><a href=<?= base_url('login/logout')?> >Logout</a></li>
+                <li>Welcome <?php echo $this->session->userdata('user')['username']?>!</li>
+                <li><a href="<?= base_url('login/logout')?>" class="btn btn-primary" >Logout</a></li>
       </ul>
     </div>
   </div>
