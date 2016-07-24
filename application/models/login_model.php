@@ -5,9 +5,9 @@ class login_model extends CI_Model{
     {
         $q = $this->db->where(['username'=>$username , 'password'=> $password])
                 ->get('user_table');
+
         if($q->num_rows()){
-            $q->row()->id;
-            return TRUE;
+            return $q->row();
         }
         else
         {
